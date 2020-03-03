@@ -102,3 +102,28 @@ $('form').on('submit',function(e){
             console.log("An unknown error occured")
             break;
     }
+    if(gender == "female"){
+        dayOutcomeInDom.innerHTML = `${akanName.day}`;
+        akanOutcomeInDom.innerHTML= `${akanName.female}`
+
+    }else{
+        dayOutcomeInDom.innerHTML = `${akanName.day}`;
+        akanOutcomeInDom.innerHTML= `${akanName.male}`
+       
+    }
+
+    // clear form values 
+    $('form')[0].reset();
+
+    validDay = false; 
+    validMonth= false;
+    validYear = false;
+    validGender = false;
+  
+    // Disbale the submit button after submitting
+    $('input[type=submit]').attr('disabled','disabled');
+
+    e.preventDefault();
+});
+
+});
