@@ -24,6 +24,36 @@
                 <br> Makes you Wonder, were you to be born in Ghana, What would your name be? 
                 Curious? <a href="#calculator">Find Out now</a>
         </div>
-        
+        <div id="calculator" class="row" style="border:2px solid black;">
+            <div class="myForm col-md-7">
+                <form>
+                    <div class="container">
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <label for="day" class="col-form-label">Day</label>
+                                <input class="form-control" type="number" name="day" id="day" min="1" max="31" placeholder="1-31">
+                                <span class="show-error">Value must be between 1-31</span>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="month" class="col-form-label">Month</label>
+                                <input type="number" name="month" id="month" class="form-control" min="1" max="12" placeholder="1-12">
+                                <span class="show-error">Value must be between 1-12</span>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="year" class="col-form-label">Year</label>
+                                <input class="form-control" id="year" name="year" type="number" min="1900" max="2018" placeholder="1900-2018">
+                                <span class="show-error">Value must be between 1900-2018</span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Sex</label>
+                                <select name="sex" id="sex" class="form-control">
+                                    <option value=""></option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
 </body>
 </html>
