@@ -145,6 +145,11 @@ $('form').on('submit',function(e){
     validYear = false;
     validGender = false;
 
+    // Disbale the submit button after submitting
+    $('input[type=submit]').attr('disabled','disabled');
+
+    e.preventDefault();
+
 });
 
 });
