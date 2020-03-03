@@ -33,3 +33,21 @@ $(function(){
             $('input[type=submit]').attr('disabled','disabled');
         }
     }
+    let validDay = false; 
+let validMonth= false;
+let validYear = false;
+let validGender = false;
+
+$('#day').on('blur',function(){
+    if(this.value < 1 || this.value > 31){
+        validDay = false;
+        adderror($(this))
+        checkwholeFormValidity();
+        
+    }else{
+        validDay = true;
+        removeError($(this))
+        checkwholeFormValidity();
+        
+    }
+})
