@@ -16,3 +16,20 @@ $(function(){
     
         return Math.abs((d+ Math.floor((2.6*m)-0.2)-(2*c)+y+Math.floor(y/4)+Math.floor(c/4))%7);
     }
+    function adderror(selector){
+        $(selector).addClass('error');
+        $(selector).next().css({display:"block"})
+    }
+    
+    function removeError(selector){
+        $(selector).removeClass('error')
+        $(selector).next().css({display:"none"})
+    }
+    function checkwholeFormValidity(){
+        if(validDay && validMonth && validYear && validGender){
+            
+            $('input[type=submit]').removeAttr('disabled');
+        }else{
+            $('input[type=submit]').attr('disabled','disabled');
+        }
+    }
