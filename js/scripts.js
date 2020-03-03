@@ -33,10 +33,11 @@ $(function(){
             $('input[type=submit]').attr('disabled','disabled');
         }
     }
+
     let validDay = false; 
-let validMonth= false;
-let validYear = false;
-let validGender = false;
+    let validMonth= false;
+    let validYear = false;
+    let validGender = false;
 
 $('#day').on('blur',function(){
     if(this.value < 1 || this.value > 31){
@@ -49,6 +50,30 @@ $('#day').on('blur',function(){
         removeError($(this))
         checkwholeFormValidity();
         
+    }
+})
+
+$('#month').on('blur',function(){
+    if(this.value <1 || this.value > 12){
+        validMonth = false;
+        adderror($(this))
+        checkwholeFormValidity();
+    }else{
+        validMonth = true;
+        removeError($(this))
+        checkwholeFormValidity()
+    }
+})
+
+$('#year').on('blur',function(){
+    if(this.value < 1900 || this.value > 2018){
+        validYear = false;
+        adderror($(this))
+        checkwholeFormValidity();
+    }else{
+        validYear = true;
+        removeError($(this))
+        checkwholeFormValidity()   
     }
 })
 $('#sex').on('click',function(){
@@ -119,11 +144,7 @@ $('form').on('submit',function(e){
     validMonth= false;
     validYear = false;
     validGender = false;
-  
-    // Disbale the submit button after submitting
-    $('input[type=submit]').attr('disabled','disabled');
 
-    e.preventDefault();
 });
 
 });
