@@ -51,3 +51,15 @@ $('#day').on('blur',function(){
         
     }
 })
+$('#sex').on('click',function(){
+    if(this.value){
+        validGender = true;
+        removeError($(this))
+        checkwholeFormValidity()
+    }else{
+        validGender = false;
+        adderror($(this))
+        checkwholeFormValidity();
+    }
+})
+
