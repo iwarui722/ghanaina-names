@@ -1,0 +1,38 @@
+nav ul {
+    list-style-type: none;
+    float:right;
+}
+
+nav ul li{
+    display:inline-block;
+    
+}
+nav ul li a{
+    padding:10px;
+    text-decoration: none !important;
+}
+
+nav::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.jumbotron{
+    /* background-color: #1E1E1E; */
+    position: relative;
+    height:300px;
+    border-radius: 10px;
+
+}
+.jumbotron h1{
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    left:10%;
+    font-size: 50px;
+}
+.jumbotron img{
+    position: absolute;
+    max-width: 200px;
+    max-height: 200px;
+    left:60%;
+}
