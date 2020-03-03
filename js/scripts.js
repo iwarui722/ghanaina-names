@@ -62,4 +62,43 @@ $('#sex').on('click',function(){
         checkwholeFormValidity();
     }
 })
+$('form').on('submit',function(e){
 
+    let day = parseInt($('#day')[0].value);
+    let month = parseInt($('#month')[0].value);
+    let year = $('#year')[0].value;
+    let gender= $('#sex')[0].value;
+
+    let cc = parseInt(year.substr(0,2));
+    let yy = parseInt(year.substr(2,2));
+
+    let calculatedDay = dayCalculator(cc,yy,month,day);
+
+    let akanName;
+    
+    switch (calculatedDay) {
+        case 0:
+            akanName = {male:"Kwasi",female:"Akosua",day:"Sunday"}
+            break;
+        case 1:
+            akanName = {male:"Kwadwo", female:"Adwoa",day:"Monday"}
+            break;
+        case 2:
+            akanName = {male:"Kwabena", female:"Abenaa",day:"Tuesday"}
+            break;
+        case 3:
+            akanName = {male:"Kwaku", female:"Akua",day:"Wednesday"}
+            break;
+        case 4:
+            akanName = {male:"Yaw",female:"Yaa",day:"Thursday"}
+            break;
+        case 5:
+            akanName = {male:"Kofi", female:"Afua",day:"Friday"}
+            break;
+        case 6:
+            akanName = {male:"Kwame", female:"Ama",day:"Saturday"}
+            break;
+        default:
+            console.log("An unknown error occured")
+            break;
+    }
