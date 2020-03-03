@@ -36,3 +36,50 @@ nav::after{
     max-height: 200px;
     left:60%;
 }
+}
+.description p{
+    font-family: 'Neucha', cursive;
+    font-size: 20px;
+    /* line-height: 40px; */
+}
+#calculator{
+    margin:5px;
+}
+.myForm{
+    margin-bottom:10px;
+}
+.outcome{
+    position:relative;
+    min-height:200px;
+    width:100%;
+    background-color: #E9ECEF;
+}
+.outcome h3,p{
+    display:inline-block;
+}
+.outcome div:first-child{
+    margin-top: 50px;
+}
+#dayOfWeek, #akanName{
+    font-size: 24px;
+    font-family: 'Neucha', cursive;
+}
+.show-error{
+    display: none;
+    font-size:12px;
+    color:red;
+}
+
+footer{
+    margin:5px 0px;
+   padding:5px;
+   text-align: center;
+}
+.error{
+    border:1px solid red;
+}
+@media (max-width:700px){
+    .jumbotron img{
+        left:60%;
+    }
+}
